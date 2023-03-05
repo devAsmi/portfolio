@@ -3,6 +3,7 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Header from "./Header";
 import Footer from "./Footer";
+import { Container, Row } from "react-bootstrap";
 
 export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState("Home");
@@ -20,10 +21,14 @@ export default function PortfolioContainer() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-    <div>
-      <Header handlePageChange={handlePageChange} />
-      {renderPage()}
-      <Footer />
-    </div>
+    <Container fluid>
+      <Row>
+        <Header handlePageChange={handlePageChange} />
+      </Row>
+      <Row>{renderPage()}</Row>
+      <Row>
+        <Footer />
+      </Row>
+    </Container>
   );
 }
