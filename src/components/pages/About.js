@@ -10,7 +10,7 @@ export default function About() {
 
       <div className="d-flex gap-4">
         <img
-          src={process.env.PUBLIC_URL + "/picture.jpg"}
+          src={process.env.PUBLIC_URL + "/IMG-0438.jpg"}
           alt="personal"
           width={400}
           height={500}
