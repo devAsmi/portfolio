@@ -12,7 +12,6 @@ export default function PortfolioContainer() {
 
   useEffect(() => {
     const hashLocation = window.location.hash;
-    console.log(hashLocation);
     if (hashLocation === "" || hashLocation === "#home") {
       setCurrentPage("Home");
     }
@@ -47,14 +46,12 @@ export default function PortfolioContainer() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-    <Container fluid>
-      <Row>
+    <Container fluid className="h-100">
+      <div className="d-flex flex-column">
         <Header handlePageChange={handlePageChange} />
-      </Row>
-      <Row>{renderPage()}</Row>
-      <Row>
+        {renderPage()}
         <Footer />
-      </Row>
+      </div>
     </Container>
   );
 }

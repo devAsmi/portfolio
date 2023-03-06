@@ -3,7 +3,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 
 export default function Navigation(props) {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light">
       <Container>
         <Navbar.Brand href="#home">Asmita Pokhrel</Navbar.Brand>
         <Nav activeKey={window.location.hash}>

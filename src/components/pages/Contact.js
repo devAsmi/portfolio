@@ -76,60 +76,62 @@ export default function Contact() {
   }
 
   return (
-    <Form onSubmit={handleFormSubmit}>
-      <Form.Group className="mb-3" controlId="form.ControlInput1">
-        <Form.Label>Name</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="Your name"
-          required
-          value={name}
-          onChange={handleChange}
-          onBlur={validateUserName}
-          name="name"
-          isInvalid={nameInvalid}
-        />
-        <Form.Control.Feedback type="invalid">
-          Please provide a valid name
-        </Form.Control.Feedback>
-      </Form.Group>
+    <div className="d-flex flex-column  align-items-center p-4">
+      <Form onSubmit={handleFormSubmit} className="w-50">
+        <Form.Group className="mb-3" controlId="form.ControlInput1">
+          <Form.Label>Name</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Your name"
+            required
+            value={name}
+            onChange={handleChange}
+            onBlur={validateUserName}
+            name="name"
+            isInvalid={nameInvalid}
+          />
+          <Form.Control.Feedback type="invalid">
+            Please provide a valid name
+          </Form.Control.Feedback>
+        </Form.Group>
 
-      <Form.Group className="mb-3" controlId="form.ControlInput1">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control
-          type="email"
-          placeholder="Your email"
-          required
-          value={email}
-          onChange={handleChange}
-          onBlur={validateEmail}
-          name="email"
-          isInvalid={emailInvalid}
-        />
-        <Form.Control.Feedback type="invalid">
-          Please provide a valid email address
-        </Form.Control.Feedback>
-      </Form.Group>
+        <Form.Group className="mb-3" controlId="form.ControlInput1">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control
+            type="email"
+            placeholder="Your email"
+            required
+            value={email}
+            onChange={handleChange}
+            onBlur={validateEmail}
+            name="email"
+            isInvalid={emailInvalid}
+          />
+          <Form.Control.Feedback type="invalid">
+            Please provide a valid email address
+          </Form.Control.Feedback>
+        </Form.Group>
 
-      <Form.Group className="mb-3" controlId="form.ControlInput1">
-        <Form.Label>Message</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="Your message"
-          required
-          value={message}
-          onChange={handleChange}
-          onBlur={validateMessage}
-          name="message"
-          isInvalid={messageInvalid}
-          as="textarea"
-          rows={5}
-        />
-        <Form.Control.Feedback type="invalid">
-          Please provide a valid message.
-        </Form.Control.Feedback>
-      </Form.Group>
-      <Button type="submit">Submit form</Button>
-    </Form>
+        <Form.Group className="mb-3" controlId="form.ControlInput1">
+          <Form.Label>Message</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Your message"
+            required
+            value={message}
+            onChange={handleChange}
+            onBlur={validateMessage}
+            name="message"
+            isInvalid={messageInvalid}
+            as="textarea"
+            rows={5}
+          />
+          <Form.Control.Feedback type="invalid">
+            Please provide a valid message.
+          </Form.Control.Feedback>
+        </Form.Group>
+        <Button type="submit">Submit form</Button>
+      </Form>
+    </div>
   );
 }
