@@ -6,7 +6,7 @@ export default function Navigation(props) {
     <Navbar bg="light" expand="lg">
       <Container>
         <Navbar.Brand href="#home">Asmita Pokhrel</Navbar.Brand>
-        <Nav defaultActiveKey="#home">
+        <Nav activeKey={window.location.hash}>
           <Nav.Link href="#home" onClick={() => props.handlePageChange("Home")}>
             About me
           </Nav.Link>
