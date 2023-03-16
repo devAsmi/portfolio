@@ -39,6 +39,12 @@ const projects = [
     deployed: "https://devasmi.github.io/Weather-Info/",
     image: "/assets/images/weatherinfo.png",
   },
+  {
+    name: "Caffiends",
+    github: "https://github.com/devAsmi/caffiends",
+    deployed: "https://caffiends.herokuapp.com/",
+    image: "/assets/images/caffiends.png",
+  },
 ];
 
 export default function Projects() {
